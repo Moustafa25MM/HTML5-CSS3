@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body{
+    background-image: url("./paints-1.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container{
+    display: flex;
+    width: 20%;
+    padding: 10px;
+    max-width: 1000px;
+  }
+  section{
+    background:mediumseagreen;
+    border-radius: 7px;
+    border: 2px solid;
+  }
+  .tools-board{
+    width: 250px;
+    padding: 15px 22px 15px;
+
+  }
+  .tools-board .row{
+    margin-bottom: 300px;
+  }
+  .row .options{
+    list-style: none;
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 10px;
+  }
+  .row .options .option-tool{
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    padding: 15px;
+    font-size: 30px;
+    
+  }
+  
+  .container .tools-board .row .title {
+      color : blue;
+      font-size: 20px;
+  }
+  #svg{
+    background-color: white;
+  }
+  
+  #img1{
+    height: 120px;
+    width: 72px;
+    
+  }
+  #img2{
+    height: 120px;
+    width: 72px;
+    
+  }
+  #img3{
+    height: 120px;
+    width: 72px;
+    
+  }
+
+  h2 {
+    color: palegreen;
+  }
+  footer{
+    width: 300px;
+    color: black;
+    margin-bottom: 10%;
+    font-size: 20px;
+  }

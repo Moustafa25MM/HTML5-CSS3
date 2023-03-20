@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>lab 2 B Using SVG</title>
+</head>
+<body>
+    <div class="container">
+        <section class="tools-board">
+          <div class="row">
+            <label class="title">Shapes :</label>
+            <ul class="options">
+              <li class="option-tool" id="rectangle">
+                <button onclick="drawRect()">Rectangle</button>
+                <img src="./r4.png" onclick="drawRect()" id = "img1">
+              </li>
+              <li class="option-tool" id="circle">
+                <button onclick="drawCircle()">Circle</button>
+                <img src="./c.PNG" onclick="drawCircle()" id = "img2">
+
+              </li>
+              <li class="option-tool" id="Line">
+                  <button onclick="drawLine()" >Line</button>
+                  <img src="./l4.PNG" onclick="drawLine()" id = "img3">
+
+                </li>
+            </div>
+        </section>
+    </div>
+
+     <svg   id ="svg" width="1000" height="500" style="border: 5px solid red">
+        
+    
+    
+    </svg> 
+</body>
+<footer>
+  <h2>Welcome To My Paint Project using SVG</h2>
+    <p>© Copyright, Moustafa Mahmoud OS Intake 43</p>
+</footer>
+    <script>
+        const svg = document.getElementById("svg");
+
+        function drawRect() { 
+            const rect = document.createElementNS("http://www.w3.org/2000/svg","rect");
+            svg.appendChild(rect);
+
+            const setAttributes = (keys , values) => {
+              Object.entries(values).forEach(([key,value]) => {
+                keys.setAttributeNS(null,key,value);
+              });
+            };
+            setAttributes (rect , {
+              width: 200,
+              height:100,
+              x : 20 ,
+              y : 20,
+              fill : "red",
+              "stroke-width":10,
+              stroke : "yellow"
+            });
+         }
+
+        function drawCircle() {
+            const circle = document.createElementNS("http://www.w3.org/2000/svg","circle");
+
+        svg.appendChild(circle);
+
+        const setAttributes = (keys , values) => {
+            Object.entries(values).forEach(([key , value]) => {
+                keys.setAttributeNS(null,key,value);
+            });
+        };
+
+        setAttributes(circle , {
+            cx : 300,
+            cy : 70,
+            r : 40,
+            stroke : "blue" ,
+            "stroke-width" : 5 ,
+            fill : "green"
+        });
+        }
+
+        function drawLine(){
+          const line = document.createElementNS("http://www.w3.org/2000/svg","line")
+          svg.appendChild(line);
+
+          const setAttributes = (keys,values) => {
+            Object.entries(values).forEach(([key,value]) => {
+              keys.setAttributeNS(null,key,value);
+            });
+          }
+
+          setAttributes (line , {
+            stroke : "black",
+            x1 : 900,
+            y1: 30,
+            x2:200,
+            y2:300,
+            "stroke-width" : 5
+          })
+        }
+       
+
+
+    </script>
+</html>

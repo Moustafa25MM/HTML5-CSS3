@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body {
+    background-image: url("./soundcloud.webp");
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.container .nav {
+    justify-content: center;
+    background-color: gold;
+    width: 60%;
+    margin-left: 20%;
+}
+#audio{
+    display: flex;
+    justify-content: center;
+}
+#option{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#Music{
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 99%;
+    margin-left: 40%;
+    padding: 20px;
+}
+
+#option .option-one .btn-one ,
+#option .option-two .btn-two ,
+#option .option-three .btn-three {
+    color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: white;
+    padding: 0.2rem;
+}

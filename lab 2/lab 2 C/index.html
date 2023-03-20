@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 2 C</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button onclick="getLocation()" id="btn">My Location</button>
+    <p id="para"></p>
+    <p id="para1"></p>
+    <div id="mylocation">
+
+    </div>
+</body>
+<script>
+   
+    var para = document.getElementById("para");
+    var para1 = document.getElementById("para1");
+    var mylocation = document.getElementById("mylocation");
+    var iframe = document.createElement("iframe");
+    iframe.frameBorder=0;
+    iframe.width="1000px";
+    iframe.height="500px";
+
+    function getLocation() {
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition,showError);
+        }else{
+
+            para.innerHTML = "Geo Location isn't supported by your Browser" ;
+        }
+       
+     }
+
+     function showPosition(pos){
+        var lat = pos.coords.latitude ;
+        var long = pos.coords.longitude ;
+        para.innerHTML = "Latitude : " + lat ;
+        para1.innerHTML = "Longitude : " + long;
+        let url = `http://maps.google.com/maps?q=${lat},${long}&output=embed`;
+        iframe.setAttribute("src",url);
+        mylocation.append(iframe) 
+        window.open(url,"_blank");
+     }
+     function showError(err) { 
+        switch(err.code){
+            case err.PERMISSION_DENIED:
+                para.innerHTML="permission denied";
+                break;
+            case err.TIMEOUT:
+                para.innerHTML="it took a long time"
+                break;
+            case err.UNKNOWN_ERROR:
+                para.innerHTML="Unknown Error Occurred"
+                break;
+        }
+      }
+</script>
+</html>

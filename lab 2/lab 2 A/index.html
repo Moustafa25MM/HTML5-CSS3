@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Drawing App JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <section class="tools-board">
+        <div class="row">
+          <label class="title">Shapes :</label>
+          <ul class="options">
+            <li class="option tool" id="rectangle">
+              <span>Rectangle</span>
+            </li>
+            <li class="option tool" id="circle">
+              <span>Circle</span>
+            </li>
+            <li class="option tool" id="Line">
+                <span>Line</span>
+              </li>
+              <div class="row">
+                <ul class="options">
+                  <li class="option active tool" id="brush">
+                    <span>Draw</span>
+                  </li>
+                  <li class="option tool" id="eraser">
+                    <span>Eraser</span>
+                  </li>
+                  <li class="option">
+                    <input type="range" id="size-slider" min="1" max="30" value="5">
+                  </li>
+                </ul>
+              </div>
+            <br><br><br><br><br><br><br>
+            <li class="option">
+              <input type="checkbox" id="fill-color">
+              <label for="fill-color">Fill With</label>
+            </li>
+          </ul>
+        </div>
+        <br><br>
+        
+        <div class="row colors">
+          <label class="title">Color</label>
+          <ul class="options">
+            <li class="option"></li>
+            <li class="option selected"></li>
+            <li class="option"></li>
+            <li class="option"></li>
+            <li class="option">
+              <input type="color" id="color-picker" value="#4A98F7">
+            </li>
+          </ul>
+        </div>
+        
+      </section>
+      <section class="drawing-board">
+        <canvas width="750px" height="750px" style="border: 3px solid black;"></canvas>
+      </section>
+    </div>
+    
+  </body>
+  <footer>
+    <h2>Welcome To My Paint Project using Canvas</h2>
+    <p>© Copyright, Moustafa Mahmoud OS Intake 43</p>
+  </footer>
+</html>

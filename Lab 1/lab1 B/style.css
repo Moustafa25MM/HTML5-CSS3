@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.container .label{
+    border: 4px solid black;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    margin: 20px;
+    padding: 10px;
+    font-size: 2rem;
+}
+.container .label input{
+    width: 20rem;
+    height: 2.5rem;
+    border: 2px solid red;
+}
+.container .label input:focus{
+    font-size: 20px;
+}
+
+.container .label .input-salary {
+    background-color: red;
+}

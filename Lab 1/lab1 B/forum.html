@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lab2 B</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="label">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="input-name">
+            <div class="error-name"></div>
+        </div>
+        <div class="label">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="input-email">
+            <div class="error-email"></div>
+        </div>
+        <div class="label">
+            <label for="pass">password</label>
+            <input type="password" id="pass" class="input-password">
+            <div class="error-password"></div>
+        </div>
+        <div class="label">
+            <label for="age">age</label>
+            <input type="number" id="age" class="input-age">
+            <div class="error-age"></div>
+        </div>
+        <div class="label">
+            <label for="salary">salary between 1000$ & 10000$</label>
+            <input type="range"  id="salary" name="salary" class="input-salary" min="1000$" max="10000$" value="5000$">
+            <div class="output-salary"></div>
+        </div>
+    </div>  
+    
+    <script src="file2.js"></script>
+</body>
+</html>
